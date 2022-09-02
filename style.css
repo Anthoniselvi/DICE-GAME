@@ -1,0 +1,77 @@
+html, body{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    padding-top: 50px;
+    background-color: goldenrod;
+    color: red;
+    font-family: cursive;
+    height: 100vh;
+}
+.container{
+    width: 400px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: slateblue;
+    color: aliceblue;
+    padding: 50px;
+    border-radius: 10px;
+}
+h1{
+    color: pink;
+}
+.heading{
+    color: white;
+}
+.players{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.dice{
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    color: brown;
+    margin: 0 auto;
+    font-size: 80px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    color: royalblue;
+    padding: 20px 30px;
+    font-size: 20px;
+    margin: 40px auto;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#rollBtn{
+    background-color: lightblue;
+    color: brown;
+}
+
+#resetBtn{
+    background-color: brown;
+    color: lightblue;
+}
+
+button:focus{
+    outline: none;
+}
+
+#resetBtn{
+    display: none;
+}
+
+.active{
+    box-shadow: -2px 6px 18px 3px rgba(rgb(206, 83, 83), rgb(94, 218, 94), rgb(90, 90, 224), alpha);
+}
