@@ -2,7 +2,7 @@ let player1Score = 0
 let player2Score = 0
 let player3Score = 0
 
-let player1Turn = false
+let player1Turn = true
 let player2Turn = false
 let player3Turn = false
 
@@ -29,9 +29,14 @@ rollBtn.addEventListener ('click', function(){
         player1Score += randomNumber
         player1Scoreboard.textContent = player1Score
         player1Dice.textContent = randomNumber
+        player2Dice.textContent = "-"
+        player3Dice.textContent = "-"
         player1Dice.classList.remove("active")
         player2Dice.classList.add("active")
         message.textContent = "Player 2 Turn"
+
+        player2Turn = true;
+        player1Turn = false;
     } 
 
     else if (player2Turn === true) {
@@ -39,9 +44,14 @@ rollBtn.addEventListener ('click', function(){
         player2Score += randomNumber
         player2Scoreboard.textContent = player2Score
         player2Dice.textContent = randomNumber
+        player3Dice.textContent = "-"
+        player1Dice.textContent = "-"
         player2Dice.classList.remove("active")
         player3Dice.classList.add("active")
         message.textContent = "Player 3 Turn"
+
+        player3Turn = true;
+        player2Turn = false;
     }  
 
     else if (player3Turn === true) {
@@ -49,9 +59,14 @@ rollBtn.addEventListener ('click', function(){
         player3Score += randomNumber
         player3Scoreboard.textContent = player3Score
         player3Dice.textContent = randomNumber
+        player2Dice.textContent = "-"
+        player1Dice.textContent = "-"
         player3Dice.classList.remove("active")
         player1Dice.classList.add("active")
         message.textContent = "Player 1 Turn"
+
+        player1Turn = true;
+        player3Turn = false;
     }  
 
   
@@ -66,7 +81,6 @@ rollBtn.addEventListener ('click', function(){
         showResetButton()
     }
     
-    player1Turn = !player1Turn
 })
 
 resetBtn.addEventListener('click', function(){
@@ -87,41 +101,10 @@ function reset(){
     player2Dice.textContent = "-"
     player3Dice.textContent = "-"
 
-   if (player1Turn === True) {
-    
         message.textContent = "Player 1 Turn"
         resetBtn.style.display = "none"
         rollBtn.style.display = "block"
-        player2Dice.classList.remove("active")
         player1Dice.classList.add("active")
-   }
-    else if (player2Turn === True) {
-
-        message.textContent = "player 2 Turn"
-        resetBtn.style.display = "none"
-        rollBtn.style.display = "block"
+        player2Dice.classList.remove("active")
         player3Dice.classList.remove("active")
-        player2Dice.classList.add("active")
-    }
-    else if (player3Turn === True) {
-
-        message.textContent = "Player 3 Turn"
-        resetBtn.style.display = "none"
-        rollBtn.style.display = "block"
-        player1Dice.classList.remove("active")
-        player3Dice.classList.add("active")
-    }
-
 }
-
-
-
-
-
-
-
-
-
-
-
-

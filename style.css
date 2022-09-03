@@ -21,9 +21,14 @@ body{
 }
 h1{
     color: pink;
+    font-size: 40px;
+    font-weight: bold;
+    text-shadow: 2px 2px red;
 }
 .heading{
     color: white;
+    font-size: 30px;
+    text-shadow: none;
 }
 .players{
     display: flex;
@@ -48,6 +53,7 @@ button{
     color: royalblue;
     padding: 20px 30px;
     font-size: 20px;
+    font-weight: bold;
     margin: 40px auto;
     border: none;
     border-radius: 5px;
@@ -57,11 +63,13 @@ button{
 #rollBtn{
     background-color: lightblue;
     color: brown;
+    border: 2px solid brown;
 }
 
 #resetBtn{
     background-color: brown;
     color: lightblue;
+    border: 2px solid lightblue;
 }
 
 button:focus{
